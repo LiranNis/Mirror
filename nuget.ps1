@@ -3,9 +3,9 @@ $feedUrlBase = "https://www.nuget.org/api/v2/"
 # the rest will be params when converting to funclet 
 $latest = $true 
 $overwrite = $false 
-$top = 1500 #use $top = $null to grab all or a number to get TOP 500 packages 
+$top = $null #use $top = $null to grab all or a number to get TOP 500 packages 
 # $destinationDirectory = join-path ([Environment]::GetFolderPath("MyDocuments")) "NuGetLocal" 
-$destinationDirectory = "D:\Downloads\NuGetLocal"
+$destinationDirectory = "T:\Projects\Nexus\Mirror\Nuget"
 
 # --- locals --- 
 $webClient = New-Object System.Net.WebClient
@@ -26,14 +26,10 @@ foreach ($entry in $entries) {
     $pagepercent = ((++$progress)/$entries.Length*100) 
     if ((-not $overwrite) -and (Test-Path -path $saveFileName)) 
     { 
-        write-progress -activity "$fileName already downloaded" ` 
-                       -status "$pagepercent% of current page complete" ` 
-                       -percentcomplete $pagepercent 
+        write-progress -activity "$fileName already downloaded" -status "$pagepercent% of current page complete" -percentcomplete $pagepercent 
         continue 
     } 
-    write-progress -activity "Downloading $fileName" ` 
-                   -status "$pagepercent% of current page complete" ` 
-                   -percentcomplete $pagepercent
+    write-progress -activity "Downloading $fileName" -status "$pagepercent% of current page complete" -percentcomplete $pagepercent
 
     [int]$trials = 0 
     do { 

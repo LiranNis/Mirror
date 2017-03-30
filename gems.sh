@@ -1,2 +1,3 @@
 # sudo gem install rubygems-mirror
-gem mirror
+# cp conf/.mirrorrc ~/.gem/.mirrorrc
+gem-mirror 

@@ -1,0 +1,7 @@
+---
+- from: http://rubygems.org
+  to: /mnt/t/Projects/Nexus/Mirror/Ruby
+  parallelism: 10
+  retries: 3
+  delete: false 
+  skiperror: true
