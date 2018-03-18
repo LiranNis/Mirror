@@ -44,6 +44,8 @@ Change dir to the gems folder and run
 ```
 gem nexus *
 ```
+**Note** if redeploy is disabled this command will fail if package already exists.
+
 ## Nuget
 After downloading with the script, you can upload the files to the nuget-hosted repository using:  
 `nuget push *.nupkg -Source http://<servername>:8081/repository/nuget-hosted/`  
