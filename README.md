@@ -13,6 +13,11 @@ Install twine package
 ```
 pip install twine
 ```
+
+To upload package use:
+```
+twine upload --repository-url http://centosnexus:8081/repository/python-hosted/ <Package .whl/other location>
+```
 ## Ruby
 In order to push ruby gems, nexus gem need to be installed
 ```
