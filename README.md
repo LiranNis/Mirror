@@ -9,7 +9,10 @@ Doesn't support:
 
 # Uploading to Nexus
 ## Python
-
+Install twine package  
+```
+pip install twine
+```
 ## Ruby
 In order to push ruby gems, nexus gem need to be installed
 ```
@@ -46,7 +49,13 @@ gem nexus *
 ```
 **Note** if redeploy is disabled this command will fail if package already exists.
 
+Todo:
+- [ ] Find a way to avoid redeploy without error
+- [ ] Figure what is wrong with the package 1234567890_ (error 500 filename and gemname from gem do not match)
+
 ## Nuget
 After downloading with the script, you can upload the files to the nuget-hosted repository using:  
-`nuget push *.nupkg -Source http://<servername>:8081/repository/nuget-hosted/`  
+```
+nuget push *.nupkg -Source http://<servername>:8081/repository/nuget-hosted/
+```
 Replace with the correct repository url (https).  
