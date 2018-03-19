@@ -14,7 +14,11 @@ Install twine package
 pip install twine
 ```
 
-To upload package use:
+To upload all the packages, cd to the packages folder inside bandersnatch sync folder and run:
+```
+twine upload --repository-url http://centosnexus:8081/repository/python-hosted/ */*/*/*
+```  
+To upload specific package use:
 ```
 twine upload --repository-url http://centosnexus:8081/repository/python-hosted/ <Package .whl/.exe/etc. location>
 ```
