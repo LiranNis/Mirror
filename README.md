@@ -16,10 +16,10 @@ pip install twine
 
 To upload package use:
 ```
-twine upload --repository-url http://centosnexus:8081/repository/python-hosted/ <Package .whl/other location>
+twine upload --repository-url http://centosnexus:8081/repository/python-hosted/ <Package .whl/.exe/etc. location>
 ```
 Todo:
-- [ ] Write script to upload all in bandersnatch folder hierarchy
+- [ ] Write script to upload all bandersnatch folder hierarchy
 ## Ruby
 In order to push ruby gems, nexus gem need to be installed
 ```
